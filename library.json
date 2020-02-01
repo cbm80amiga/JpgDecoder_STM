@@ -1,0 +1,21 @@
+{
+  "name": "JpgDecoder",
+  "version": "1.0.1",
+  "keywords": "tft, ePaper, display, ESP8266, NodeMCU, ESP32, M5Stack, ILI9341, ST7735, ILI9163, ST7789, ILI9486, RM68140",
+  "description": "JPEG library based on Tiny JPEG Decompressor",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/cbm80amiga/JpgDecoder_STM"
+  },
+  "authors":
+  [
+    {
+        "name": "Pawel A. Hernik",
+        "email": "pawelhernik123@gmail.com",
+        "maintainer": true
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "stm32", "atmelavr"
+}
