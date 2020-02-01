@@ -43,8 +43,8 @@ Arduino_ST7789 lcd = Arduino_ST7789(TFT_DC, TFT_RST);
 
 #include <JpgDecoder_STM.h>
 
-// below callback function renders decoded JPEG to LCD
-bool renderToLCD(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t* bitmap)
+// the callback function below renders decoded JPEG on the LCD
+bool renderLCD(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t* bitmap)
 {
   //lcdSPI();
   if(y>=lcd.height()) return 0; // 0 - to stop decoding
@@ -55,7 +55,7 @@ bool renderToLCD(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t* bitmap)
 // align to a 32 bit boundary for the best performance
 #define DECODE_BUFFER_LEN 3100 
 uint8_t decodeBuffer[DECODE_BUFFER_LEN] __attribute__((aligned(4)));
-JpgDecoder jpeg(renderToLCD,decodeBuffer,DECODE_BUFFER_LEN);
+JpgDecoder jpeg(renderLCD,decodeBuffer,DECODE_BUFFER_LEN);
 // -------------------
 
 void setup()
