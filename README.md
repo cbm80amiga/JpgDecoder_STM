@@ -1,5 +1,5 @@
 # JpgDecoder_STM
-JPEG decoder for STM32 based on tjpgd project
+JPEG decoder for STM32 based on tjpgd project: http://elm-chan.org/fsw/tjpgd/00index.html
 
 YouTube video:
 
